@@ -1,0 +1,23 @@
+OrganizationRoleEnum {
+  ADMIN = 'ADMIN',
+  MANAGER = 'MANAGER',
+  USER = 'USER'
+}
+
+[User]
+name        string     -> obrigatório
+email       string     -> obrigatório -> único
+password    string     -> obrigatório
+gender      GenderEnum -> opcional
+birthDay    Date       -> opcional
+cellphone   string     -> opcional
+telephone   string     -> opcional
+picture     string     -> opcional
+
+[Time]
+name	    string -> obrigatório -> único
+companyId   string -> obrigatório
+
+[Organização]
+sigla	string -> obrigatório -> único
+name	string -> opcional
